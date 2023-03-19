@@ -18,4 +18,10 @@ describe('Applevis sanity tests', () => {
         cy.get('a').contains('Podcast').invoke('text').should('equal', 'Podcast');
         cy.get('a').contains('Podcast').click();
     })
+
+    it('Open Log in page', () => {
+        cy.get("button[aria-label='Main Menu']").click();
+        cy.get('a').contains('Log in').invoke('text').should('equal', 'Log in');
+        cy.get('a').contains('Log in').click();
+    })
 });
